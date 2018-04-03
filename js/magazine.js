@@ -109,58 +109,58 @@ function zoomTo(event) {
 
 // Process click on a region
 
-// function regionClick(event) {
+function regionClick(event) {
 
-// 	var region = $(event.target);
+	var region = $(event.target);
 
-// 	if (region.hasClass('region')) {
+	if (region.hasClass('region')) {
 
-// 		$('.magazine-viewport').data().regionClicked = true;
+		$('.magazine-viewport').data().regionClicked = true;
 		
-// 		setTimeout(function() {
-// 			$('.magazine-viewport').data().regionClicked = false;
-// 		}, 100);
+		setTimeout(function() {
+			$('.magazine-viewport').data().regionClicked = false;
+		}, 100);
 		
-// 		var regionType = $.trim(region.attr('class').replace('region', ''));
+		var regionType = $.trim(region.attr('class').replace('region', ''));
 
-// 		return processRegion(region, regionType);
+		return processRegion(region, regionType);
 
-// 	}
+	}
 
-// }
+}
 
 // Process the data of every region
 
-// function processRegion(region, regionType) {
+function processRegion(region, regionType) {
 
-// 	data = decodeParams(region.attr('region-data'));
+	data = decodeParams(region.attr('region-data'));
 
-// 	switch (regionType) {
-// 		case 'link' :
+	switch (regionType) {
+		case 'link' :
 
-// 			window.open(data.url);
+			window.open(data.url);
 
-// 		break;
-// 		case 'zoom' :
+		break;
+		case 'zoom' :
 
-// 			var regionOffset = region.offset(),
-// 				viewportOffset = $('.magazine-viewport').offset(),
-// 				pos = {
-// 					x: regionOffset.left-viewportOffset.left,
-// 					y: regionOffset.top-viewportOffset.top
-// 				};
+			var regionOffset = region.offset(),
+				viewportOffset = $('.magazine-viewport').offset(),
+				pos = {
+					x: regionOffset.left-viewportOffset.left,
+					y: regionOffset.top-viewportOffset.top
+				};
 
-// 			$('.magazine-viewport').zoom('zoomIn', pos);
+			$('.magazine-viewport').zoom('zoomIn', pos);
 
-// 		break;
-// 		case 'to-page' :
+		break;
+		case 'to-page' :
 
-// 			$('.magazine').turn('page', data.page);
+			$('.magazine').turn('page', data.page);
 
-// 		break;
-// 	}
+		break;
+	}
 
-// }
+}
 
 // Load large page
 
@@ -179,7 +179,7 @@ function loadLargePage(page, pageElement) {
 
 	// Loadnew page
 	
-	img.attr('src', 'pages/large/' +  page + '.jpg');
+	img.attr('src', 'pages/large (' +  +  page + ').jpg');
 }
 
 // Load small page
